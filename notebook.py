@@ -42,13 +42,14 @@ def registrarPaciente():
         "Tipo de Seguro": tipoSeguro.get(),
         "Centro Médico": centroM.get()
 }
-#agregar pacientes a la lista
-pacientes_data.append(pacientes_data)
-
+    #agregar pacientes a la lista
+    pacientes_data.append(paciente)
+    #cargar al treeview
+    cargar_treeview()
 def cargar_treeview():
     #limpiar el treeview
     for item in treeview.get_children():
-        treeview.delete(item)
+        treeview.delete(paciente)
     #insertar cada paciente
     for i, item in enumerate(pacientes_data):
         treeview.insert(
@@ -69,8 +70,7 @@ def cargar_treeview():
 
 
 
-#cargar al treeview
-cargar_treeview()
+
 
 
 
@@ -141,7 +141,7 @@ comboCentroM.grid(row=7, column=1, padx=5, pady=5, sticky="w")
 btnFrame = tk.Frame(framePacientes)
 btnFrame.grid(row=8, column=1, columnspan=2, pady=5, sticky="w")
 # Botón registrar
-btnRegistrar = tk.Button(btnFrame, text="Registrar",bg="green", fg="white", command="")
+btnRegistrar = tk.Button(btnFrame, text="Registrar",bg="green", fg="white", command=registrarPaciente)
 btnRegistrar.grid(row=0, column=0, padx=5)
 # Botón Eliminar
 btnEliminar = tk.Button(btnFrame, text="Eliminar", bg="red", fg="White", command="")
