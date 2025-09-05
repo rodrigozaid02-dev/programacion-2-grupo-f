@@ -28,7 +28,56 @@ def enmascarar_fecha(texto):
     else:
         edadVar.set("")
     return True
- 
+#lista de pacientes
+pacientes_data=[]
+#funcion para registrar pacientes
+def registrarPaciente():
+    #crear un diccionario con los datos del paciente
+    paciente={
+        "Nombre": nombreP.get(),
+        "Fecha de Nacimiento": fechaN.get(),
+        "Edad": edadVar.get(),
+        "Género": genero.get(),
+        "Grupo Sanguíneo": entryGrupoS.get(),
+        "Tipo de Seguro": tipoSeguro.get(),
+        "Centro Médico": centroM.get()
+}
+#agregar pacientes a la lista
+pacientes_data.append(pacientes_data)
+
+def cargar_treeview():
+    #limpiar el treeview
+    for item in treeview.get_children():
+        treeview.delete(item)
+    #insertar cada paciente
+    for i, item in enumerate(pacientes_data):
+        treeview.insert(
+            "", "end", iid=str(i),
+            values=(
+                item["Nombre"],
+                item["Fecha de Nacimiento"],
+                item["Edad"],
+                item["Género"],
+                item["Grupo Sanguíneo"],
+                item["Tipo de Seguro"],
+                item["Centro Médico"]
+            )
+        )
+       
+
+
+
+
+
+#cargar al treeview
+cargar_treeview()
+
+
+
+
+
+
+
 # Crear ventana principal
 ventanaPrincipal = tk.Tk()
 ventanaPrincipal.title("Libro de Pacientes y Doctores")
