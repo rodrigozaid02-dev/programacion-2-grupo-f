@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGINA CON FORMULARIO</title>
+</head>
+<body>
+    <FORM NAME="FORMULARIO!">
+        Nombre: <INPUT TYPE="TEXT" NAME="NOMBRE"><BR>
+        Apellido: <INPUT TYPE="TEXT" NAME="APELLIDO"><BR>
+        direccion: <INPUT TYPE="TEXT" NAME="DIRECCION"><BR>
+        calle: <INPUT TYPE="TEXT" NAME="CALLE">
+        carnet de indentidad: <input type="text" name=carnet size=5 maxlength=5 value=""99999><br>
+        <br>
+        Sintomas:
+        <br>
+        <input type=checkbox name="fiebre" value=fiebre checked>Fiebre<br>
+        <input type=checkbox name="mareos" value=mareos checked>Mareos<br>
+        <input type=checkbox name="dolor de cabeza" value=dolor de cabeza checked>dolor de cabeza<br>
+        <br>
+        Genero:
+        <br>
+        <input type=radio name=genero value=masculino checked>Masculino<br>
+        <input type=radio name=genero value=femenino checked>Femenino<br>
+        <br>
+        Seguro:
+        <select name=seguro>
+            <option value="Caja Pretrolera" selected>Caja Petrolera
+            <option value="nacional">Caja Nacional
+            <option value="bancaria">Caja bancaria
+        </select>
+        <br>
+        direccion:
+        <textarea name=direccion rows=5 cols=5>
+        </textarea>
+        <br>
+        puede enviar esta solicitud al administrador del sistema
+        <input type=submit value="Enviar">
+        <br>
+        Si se ah equivocado, pulse para volver a comenzar
+        <input type=reset value="limpiar">
+
+    </FORM>
+</body>
+</html>
